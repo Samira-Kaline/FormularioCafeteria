@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cardapio</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" class="href">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="mt-5 text-center">Cardapio</h1>
+            <div class="text-right">
+                <button
+                  type="button"
+                  class="btn btn-secondary rounded-circle mr-4 font-weight-bold"
+                  id="newBtnFood"
+                  data-toggle="modal"
+                  data-target="#formFoodModal"
+                  onclick="loadFormCreateFood()">
+                  +
+                </button>
+            </div>
+            <form id="foodForm">
+                <div class="modal fade" id="formFoodModal" tabindex="-1" aria-labelledby="formFoodLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title mt-5 text-center" id="formFoodLabel">Nova Comida</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="food-name">Nome</label>
+                          <input type="text" class="form-control" id="food-name" name="name">
+                        </div>
+                        <div class="form-group">
+                          <label for="food-image">Image</label>
+                          <input type="text" class="form-control" id="food-image" name="image">
+                        </div>
+                        <div class="form-group">
+                            <label for="food-description">Descrição</label>
+                            <input type="text" class="form-control" id="food-description" name="description">
+                        </div>
+                        <div class="form-group">
+                          <label for="food-preco">Preço</label>
+                          <input type="text" name="preco" id="food-preco" class="form-control" >
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" onclick="ClearForm()" class="btn btn-light"  >Limpar</button>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            <section class="card-deck my-3"></section>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/cardapio.js" type="module"></script>
+
+    </body>
+</html>
